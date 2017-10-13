@@ -107,7 +107,7 @@ public class InclusionAdaptor  implements IAdapter {
 			String fileName = ((EventBNamed)translationDescriptor.value).getName();
 			String ext = translationDescriptor.value instanceof Context ? "buc" :
 						"bum";
-			URI fileUri = projectUri.appendSegment(fileName).appendFileExtension(ext); //$NON-NLS-1$
+			URI fileUri = projectUri.appendSegment(fileName+"_flatten").appendFileExtension(ext); //$NON-NLS-1$
 			return fileUri;
 		}
 		return null;
